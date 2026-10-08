@@ -16,13 +16,13 @@ public:
     }
 
     //example of a "custom copy constructor"
-    Rectangle(const Rectangle& rectangle) //or set = default since "trivial"
-        :
-    length(rectangle.length),
-    width(rectangle.width)
-    {
-    }
-    
+    // Rectangle(const Rectangle& rectangle) //or set = default since "trivial"
+    //     :
+    // length(rectangle.length),
+    // width(rectangle.width)
+    // {
+    // }
+
 };
 
 class Box : public Rectangle
@@ -41,7 +41,7 @@ public:
     Box(const Rectangle& rectangle, int height)
         :
     Rectangle(rectangle), //THIS is the code that I couldn't remember how to write properly
-    //it is calling the "default copy constructor" of the Rectangle class
+    //it is calling the "default copy constructor" of the Rectangle class (defining a custom copy constructor is sometimes useful)
     height(height)
     {
     }
